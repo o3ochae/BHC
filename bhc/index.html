@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BHC</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../aos/aos.css">
+  
+  <script src="../js/jquery-3.7.1.min.js"></script>
+  <script src="../js/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../aos/aos.js"></script>
+  <script src="../js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- header -->
+  <header>
+    <div class="header_i">
+      <div class="h_l">
+        <div class="logo">
+          <h1>
+            <a href="#">
+              <img src="../img/main/bhc_logo.png" alt="logo">
+              <span class="hidden_text">BHC</span>
+            </a>
+          </h1>
+        </div>
+
+        <nav>
+          <ul class="menu">
+            <li>
+              <a href="#">메뉴</a>
+              <ul class="submenu">
+                <li><a href="#">NEW</a></li>
+                <li><a href="#">치킨</a></li>
+                <li><a href="#">사이드</a></li>
+                <li><a href="#">알레르기 정보</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">매장</a>
+              <ul class="submenu">
+                <li><a href="#">매장 검색</a></li>
+                <li><a href="#">지도 검색</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">창업</a>
+              <ul class="submenu">
+                <li><a href="#">가맹점 개설</a></li>
+                <li><a href="#">창업 FAQ</a></li>
+                <li><a href="#">해외사업</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">브랜드</a>
+              <ul class="submenu">
+                <li><a href="#">BHC소개</a></li>
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">오시는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="submenu">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">고객의 소리</a></li>
+              </ul>
+            </li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </nav>
+
+        <div class="spot">
+          <a href="#" id="bhcBtn" class="active">
+            BHC
+            <span class="highlight"></span>
+          </a>
+          <a href="#" id="bhcMallBtn">
+            BHC몰
+            <span class="highlight"></span>
+          </a>
+        </div>
+
+        <div class="ham">
+          <div class="ham_i">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </div>
+      </div>
+  </header>
+  <!-- //header -->
+
+  <!-- mobile menu nav -->
+  <div class="mobile_overlay" id="mobileOverlay"></div>
+
+  <div class="mobile_menu" id="mobileMenu">
+    <div class="mobile_menu_header">
+        <button class="close_btn" id="closeBtn">×</button>
+    </div>
+
+    <div class="mobile_spot">
+      <a href="#" class="active">BHC<span class="highlight"></span></a>
+      <a href="#">BHC몰<span class="highlight"></span></a>
+  </div>
+
+  <div class="mobile_nav">
+      <div class="mobile_nav_item">
+          <a href="#" onclick="toggleSubmenu(this)">
+              메뉴
+              <span class="arrow">▼</span>
+          </a>
+          <ul class="mobile_submenu">
+              <li><a href="#">NEW</a></li>
+              <li><a href="#">치킨</a></li>
+              <li><a href="#">사이드</a></li>
+              <li><a href="#">알레르기 정보</a></li>
+          </ul>
+      </div>
+
+      <div class="mobile_nav_item">
+          <a href="#" onclick="toggleSubmenu(this)">
+              매장
+              <span class="arrow">▼</span>
+          </a>
+          <ul class="mobile_submenu">
+              <li><a href="#">매장 검색</a></li>
+              <li><a href="#">지도 검색</a></li>
+          </ul>
+      </div>
+
+      <div class="mobile_nav_item">
+          <a href="#" onclick="toggleSubmenu(this)">
+              창업
+              <span class="arrow">▼</span>
+          </a>
+          <ul class="mobile_submenu">
+              <li><a href="#">가맹점 개설</a></li>
+              <li><a href="#">창업 FAQ</a></li>
+              <li><a href="#">해외사업</a></li>
+          </ul>
+      </div>
+
+      <div class="mobile_nav_item">
+          <a href="#" onclick="toggleSubmenu(this)">
+              브랜드
+              <span class="arrow">▼</span>
+          </a>
+          <ul class="mobile_submenu">
+              <li><a href="#">BHC소개</a></li>
+              <li><a href="#">브랜드 스토리</a></li>
+              <li><a href="#">오시는 길</a></li>
+          </ul>
+      </div>
+
+      <div class="mobile_nav_item">
+          <a href="#" onclick="toggleSubmenu(this)">
+              고객센터
+              <span class="arrow">▼</span>
+          </a>
+          <ul class="mobile_submenu">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">고객의 소리</a></li>
+          </ul>
+      </div>
+
+      <div class="mobile_nav_item">
+          <a href="#">로그인</a>
+      </div>
+  </div>
+</div>
+
+  <!-- //mobile menu nav -->
+
+
+
+  <!-- hero section -->
+  <section class="h_section">
+  <div class="h_text">
+    <span>치킨의 정석,<br>언제 먹어도 맛있는<br>오리지널 후라이드</span>
+    <p>바삭하고 진한 풍미 가득한 변함없는 클래식!</p>
+  </div>
+</section>
+  <!-- //hero section -->
+
+  <!-- menu section -->
+  <section class="m_section">
+    <div class="menu_title">
+      <h2>BHC Menu</h2>
+    </div>
+
+    <div class="menu_contents">
+      <div class="box">
+        <a href="#">
+          <figure>
+            <img src="../img/main/골드킹x407.png" alt="골드킹">
+          </figure>
+          <div class="m_text">
+            <strong>골드킹</strong>
+            <div class="e_text">
+              <span>GoldKing</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="#">
+          <figure>
+            <img src="../img/main/맛초킹x407.png" alt="맛초킹">
+          </figure>
+          <div class="m_text">
+            <strong>맛초킹</strong>
+            <div class="e_text">
+              <span>MachoKing</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="#">
+          <figure>
+            <img src="../img/main/뿌링클x407.png" alt="뿌링클">
+          </figure>
+          <div class="m_text">
+            <strong>뿌링클</strong>
+            <div class="e_text">
+              <span>Bburinkle</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="#">
+          <figure>
+            <img src="../img/main/핫뿌링클x407.png" alt="핫뿌링클">
+          </figure>
+          <div class="m_text">
+            <strong>핫뿌링클</strong>
+            <div class="e_text">
+              <span>HotBburinkle</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="box">
+        <a href="#">
+          <figure>
+            <img src="../img/main/후라이드x407.png" alt="후라이드">
+          </figure>
+          <div class="m_text">
+            <strong>후라이드</strong>
+            <div class="e_text">
+              <span>FriedChicken</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- //menu section -->
+
+  <!-- bhc text section-->
+  <section class="t_section">
+    <div class="t_text">
+        <p>BETTER & HAPPIER CHOICE</p>
+        <span>BETTER & HAPPIER CHOICE</span>
+        <p>BETTER & HAPPIER CHOICE</p>
+        <span>BETTER & HAPPIER CHOICE</span>
+        <p>BETTER & HAPPIER CHOICE</p>
+        <span>BETTER & HAPPIER CHOICE</span>
+        <p>BETTER & HAPPIER CHOICE</p>
+        <span>BETTER & HAPPIER CHOICE</span>
+    </div>
+
+    <div class="b_text">
+        <span>BIC HIT CHICKEN</span>
+        <p>BIC HIT CHICKEN</p>
+        <span>BIC HIT CHICKEN</span>
+        <p>BIC HIT CHICKEN</p>
+        <span>BIC HIT CHICKEN</span>
+        <p>BIC HIT CHICKEN</p>
+        <span>BIC HIT CHICKEN</span>
+        <p>BIC HIT CHICKEN</p>
+    </div>
+</section>
+
+  <!-- //bhc text section-->
+
+  <!-- our story section -->
+  <section class="s_section">
+    <div class="story">
+      <div class="our_box">
+        <figure class="s_img1">
+          <img src="../img/main/ourstory_1.png" alt="s1">
+        </figure>
+      </div>
+
+      <div class="our_box">
+        <div class="s_text">
+          <h2>
+            Our <br>Story
+          </h2>
+          <strong>
+            뜨겁게 튀기고<br>
+            정성껏 담아내고<br>
+            행복으로 완성합니다.
+          </strong>
+          <p>
+            차별화된 메뉴와 진심 어린 서비스로<br>
+            고객의 기대를 뛰어넘는 최고의 순간을 선사하며,<br>앞으로도 글로벌 시장으로 도약해 더 많은 이들에게<br>BHC만의 특별한 즐거움을 전해드리겠습니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="our_box">
+        <figure class="s_img2">
+          <img src="../img/main/ourstory_2.png" alt="s2">
+        </figure>
+      </div>
+
+      <div class="our_box">
+        <figure class="s_img3">
+          <img src="../img/main/ourstory_3.png" alt="s3">
+        </figure>
+      </div>
+    </div>
+  </section>
+  <!-- //our story section -->
+
+  <!-- video section -->
+  <section class="v_section">
+    <div class="video_i">
+      <div class="v_text">
+        <h2>BHC Video</h2>
+        <p>
+          한 입의 놀라움 끝없는 즐거움 BHC에서 시작됩니다.
+        </p>
+      </div>
+
+      <div class="v_box">
+        <iframe width="1024" height="576" src="https://www.youtube.com/embed/wTv-kOMlor4?si=YBXJzGdgFR-EBFW3"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="v_btn">
+          <a href="#">자세히 보기</a>
+        </div>
+
+      </div>
+  </section>
+  <!-- //video section -->
+
+  <!-- search store section -->
+  <section class="se_section">
+    <div class="search_i">
+      <div class="se_text">
+        <h2>
+          Search Store
+        </h2>
+        <p >
+          가까운 BHC 매장을 검색해보세요!
+        </p>
+      </div>
+
+      <div class="se_box" data-aos="zoom-in">
+        <input type="text" placeholder="BHC 매장 검색">
+        <button>
+          <img src="../img/main/icon.png" alt="검색">
+        </button>
+      </div>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25864.229706637198!2d128.5792465022614!3d35.8728132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e300359c8e39%3A0x3e7eb9d5f9260da3!2zQkhD64yA6rWs6rWQ64-Z7KCQ!5e0!3m2!1sko!2skr!4v1758249904449!5m2!1sko!2skr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+  </section>
+  <!-- //search store section -->
+
+  <!-- event section -->
+  <section class="e_section">
+    <div class="event_i">
+      <div class="e_title">
+        <h2>Event</h2>
+        <p>
+          맛있는 즐거움과 함께 다양한 이벤트에 참여해 보세요!
+        </p>
+      </div>
+
+      <div class="e_contents">
+        <div class="box">
+          <a href="#">
+            <figure>
+              <img src="../img/main/event_b1.png" alt="e1">
+            </figure>
+
+            <div class="text">
+              <span>[EVENT] 이번달은 BHC가 쏩니다!</span>
+              <p>25/08/01 - 25/09/30</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="#">
+            <figure>
+              <img src="../img/main/event_b2.png" alt="e2">
+            </figure>
+
+            <div class="text">
+              <span>[EVENT] 신메뉴의 첫 번째 손님 찾기</span>
+              <p>25/09/01 - 25/09/30</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="box">
+          <a href="#">
+            <figure>
+              <img src="../img/main/event_b3.png" alt="e3">
+            </figure>
+
+
+            <div class="text">
+              <span>[EVENT] 인스타 팔로우 이벤트</span>
+              <p>25/09/12 - 25/10/31</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //event section -->
+
+  <!-- partner section -->
+  <section class="p_section">
+    <div class="partner_i">
+      <div class="p_box">
+        <div class="p_left">
+          <div class="p_title">
+            <h2>Be Our<br>Partner</h2>
+            <p>
+              BHC는 체계적인<br>시스템과 노하우로<br>
+              성공적인 창업을 지원합니다.
+            </p>
+          </div>
+
+          <div class="p_btn">
+            <a href="#">자세히 보기</a>
+          </div>
+        </div>
+
+        <div class ="p_rihgt" data-aos="fade-left">
+          <figure>
+            <img src="../img/main/beourpartner_bg.png" alt="bg6">
+          </figure>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="dd" data-aos="fade-left"></div>
+  <!-- //partner section -->
+
+  <!-- footer -->
+  <footer>
+    <div class="footer_i">
+
+      <div class="foot_l">
+        <div class="foot_l_t">
+          <div class="fnb">
+            <ul>
+              <li><a href="#">이용약관</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">위치기반서비스이용약관</a></li>
+              <li><a href="#">영상정보처리기기운영방침</a></li>
+              <li><a href="#">이메일무단수집거부</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="foot_l_b">
+          <figure>
+            <a href="#">
+              <img src="../img/main/footer_logo.png" alt="foot_logo">
+            </a>
+          </figure>
+
+          <ul class="foot_info">
+            <li><strong>주소</strong> 서울시 송파구 올림픽로 300, 19층(신천동)</li>
+            <li><strong>대표</strong> 송호섭</li>
+            <li><strong>사업자등록번호</strong> 215-86-61559</li>
+            <li><strong>통신판매업</strong> 제2014-서울송파-0593호</li>
+            <li><strong>문의전화</strong> 05-6204-3406</li>
+            <li><strong>FAX</strong> 02-6988-2199</li>
+          </ul>
+        </div>
+
+        <div class="copy">
+          Copyright &copy; 2024. 다이닝브랜즈그룹 주식회사. All Rights reserved.
+        </div>
+      </div>
+
+      <div class="foot_r">
+        <div class="foot_r_t">
+
+          <div class="foot_icon">
+            <a href="https://www.youtube.com/channel/UCYxr19qCj4ZL22nY5FJLoag" target="_blank">
+              <img src="../img/main/icon_youtube.png" alt="youtube">
+            </a>
+
+            <a href="https://www.instagram.com/bhc_chicken_official/" target="_blank">
+              <img src="../img/main/icon_insta.png" alt="insta">
+            </a>
+
+            <a href="https://www.facebook.com/bhcchicken" target="_blank">
+              <img src="../img/main/icon_facebook.png" alt="facebook">
+            </a>
+          </div>
+        </div>
+
+
+      <div class="familysite">
+        <button class="family_btn">Family site ▼</button>
+        <ul class="family_list">
+          <li><a href="https://www.diningbrands.com/" target="_blank">다이닝브랜즈그룹</a></li>
+          <li><a href="https://www.outback.co.kr/" target="_blank">아웃백</a></li>
+          <li><a href="https://www.changgo43.co.kr/00_main/main.asp" target="_blank">창고43</a></li>
+          <li><a href="https://www.bkfood.kr/renew/" target="_blank">큰맘할매순대국</a></li>
+          <li><a href="https://www.gram-gram.com/renew/" target="_blank">그램그램</a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    <div class="top_button">
+      <div class="btn top_b1">E-쿠폰</div>
+      <div class="btn top_b2">포장</div>
+      <div class="btn top_b3">배달</div>
+      <div class="btn top_b4">TOP</div>
+    </div>
+  </footer>
+
+  <!-- //footer -->
+
+
+
+  <script src="../js/swiper.js"></script>
+
+
+</body>
+
+</html>
